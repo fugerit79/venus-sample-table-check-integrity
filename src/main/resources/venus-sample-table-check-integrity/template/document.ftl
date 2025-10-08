@@ -30,6 +30,9 @@
         <info name="excel-table-id">data-table=print</info>
         <!-- property specific for csv -->
         <info name="csv-table-id">data-table</info>
+        <#-- table-check-integrity,
+            refers to https://venusdocs.fugerit.org/guide/#doc-format-entry-point-extra-feature-table-check-integrity -->
+        <info name="table-check-integrity">${tableCheckIntegrity!'disabled'}</info>
         <footer-ext>
             <para align="right">${r"${currentPage}"} / ${r"${pageCount}"}</para>
         </footer-ext>
@@ -48,6 +51,7 @@
                     <cell><para>${current.name}</para></cell>
                     <cell><para>${current.surname}</para></cell>
                     <cell><para>${current.title}</para></cell>
+                    <cell><para>$Unexpected body cell!!</para></cell>
                 </row>
             </#list>
         </#if>
